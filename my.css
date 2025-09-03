@@ -1,76 +1,104 @@
 /* Estilo general */
 body {
-    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, lch(83.69% 83.87 93.53) 60%, #16a34a 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    color: oklab(15.434000000000001% 0 -0.00002 / 0.997);
 }
 
 /* Contenedor principal */
 .content {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 40px auto;
+    background: hsla(0, 50%, 99%, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    padding: 32px;
 }
 
 /* Título principal */
 .title {
+    color: #06a841;
     text-align: center;
-    font-size: 2rem;
-    color: #1eff40;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    margin-top: 18px;
+    margin-bottom: 12px;
+    font-size: 1.8em; /* Tamaño reducido */
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px #14f504ef;
 }
 
 /* Subtítulos */
 .subtitle {
-    font-size: 1.5rem;
-    color: #333;
-    margin-top: 20px;
-    text-decoration: underline;
+    color: oklch(50.38% 0.2032 28.841);
+    margin-top: 32px;
+    margin-bottom: 12px;
+    font-size: 1.2em; /* Tamaño reducido */
+    text-align: left;
+    text-shadow: 1px 1px 3px hsla(240, 95%, 15%, 0.844);
 }
 
-/* Párrafos */
-p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 10px 0;
-}
-
-/* Lista de logros */
+/* Listas con imágenes alineadas verticalmente */
 ul {
-    margin: 10px 0;
-    padding-left: 20px;
+    list-style: none;
+    padding: 0;
 }
 
 ul li {
-    margin-bottom: 10px;
-    font-size: 1rem;
-    line-height: 1.5;
+    display: flex;
+    align-items: flex-start; /* Alinea las imágenes y texto en la parte superior */
+    margin-bottom: 12px; /* Espaciado reducido */
+    font-size: 0.9em; /* Tamaño reducido */
+    line-height: 1.4;
 }
 
-/* Imagen */
-img {
-    display: block;
-    max-width: 100%;
+ul li img {
+    margin-right: 10px; /* Espaciado reducido entre la imagen y el texto */
+    width: 40px; /* Tamaño reducido de las imágenes */
     height: auto;
-    margin: 0 auto 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: 3px solid #1e90ff;
+    border-radius: 8px;
+    border: 2px solid #bdf409;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
-/* Enlaces de redes sociales */
-p a {
-    color: #1e90ff;
+/* Imagen principal */
+.div1 img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px hsla(58, 98%, 48%, 0.975);
+    border: 3px solid #09ed5d;
+    max-width: 100px; /* Tamaño reducido */
+    height: auto;
+}
+
+/* Enlaces */
+a {
+    color: #0d05f8;
     text-decoration: none;
+    font-size: 0.9em; /* Tamaño reducido */
     font-weight: bold;
+    transition: color 0.2s;
 }
 
-p a:hover {
+a:hover {
+    color: hsl(0, 98%, 50%);
     text-decoration: underline;
 }
+
+/* Responsividad */
+@media (max-width: 600px) {}
+    .content {
+        padding: 16px;
+    }
+    .title {
+        font-size: 1.5em; /* Tamaño reducido en pantallas pequeñas */
+    }
+    .subtitle {
+        font-size: 1em; /* Tamaño reducido en pantallas pequeñas */
+    }
+    ul li img {
+        width: 30px; /* Tamaño aún más reducido en pantallas pequeñas */
+    }
+    .div1 img {
+        max-width: 80px; /* Tamaño reducido en pantallas pequeñas */
+    }
